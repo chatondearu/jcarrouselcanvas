@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <META name="viewport"
+              content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <META http-equiv="Content-Type" Content="text/html; charset=UTF-8">
+
+        <title>Carrousel 3d Test</title>
+
+        <style type="text/css" lang="FR" media="all">
+            body{
+                background-color: #ccc;
+            }
+            canvas, div{
+                display: block;
+                background-color: #fff;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+
+        <script type="text/javascript" charset="utf-8" src="js/module.JcarrouselCanvas.min.js"></script>
+
+        <script type="text/javascript">
+        function init(){
+
+            var images = [
+                {url:"img/mini-game.png"},
+                {url:"img/mini-game.png"},
+                {url:"img/mini-game.png"},
+                {url:"img/mini-webApp.png"},
+                {url:"img/mini-game.png"},
+                {url:"img/mini-game.png"},
+                {url:"img/mini-webApp.png"}
+            ];
+
+            var carrousel = new JcarrousselCanvas('carrousel',images,{
+                hauteur : 50
+            });
+
+            var carrousel1 = new JcarrousselCanvas('carrousel1',images,{
+                rayon : 150,
+                hauteur : 20,
+                
+                reflect: false,
+                border: true,
+                borderColor: "blue",
+
+                perspective: 0.5
+            });
+
+            var carrousel2 = new JcarrousselCanvas('carrousel2',images,{
+                rayon : 1,
+                hauteur : 150,
+
+                startAngle : 0,
+
+                reflect: false,
+                shadow: true,
+
+                perspective: 1
+            });
+
+            var carrousel3 = new JcarrousselCanvas('carrousel3',images,{
+                rayon : 150,
+                hauteur : 150,
+
+                reflect: true,
+                shadow: true,
+                shadowWidth: 50,
+                loose : true,
+                step : false
+            });
+        }
+        </script>
+
+    </head>
+    <body onload="init();">
+
+        <!-- Set just a DIV element with WIDTH and HEIGHT style -->
+        <div id='carrousel' style="width:500px; height:250px;">
+        </div>
+
+        <!-- Or set just a CANVAS element with WIDTH and HEIGHT attribut -->
+        <canvas id='carrousel1' width="500" height="250">
+            Votre navigateur ne supporte pas l'utilisation des Canvas.
+        </canvas>
+        <canvas id='carrousel2' width="250" height="500">
+            Votre navigateur ne supporte pas l'utilisation des Canvas.<br/>
+        </canvas>
+        <canvas id='carrousel3' width="500" height="400">
+            Votre navigateur ne supporte pas l'utilisation des Canvas.
+        </canvas>
+    </body>
+</html>
