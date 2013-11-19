@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JCarrousselCanvas <5> </title>
+        <meta http-equiv="Content-Type" Content="text/html; charset=utf-8">
+
+        <!-- Google -->
+        <meta name="google" content="notranslate" />
+        <meta name="google-site-verification" content="..." />
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable = no">
+
+        <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <link href="src/css/bootstrap.min.css" rel="stylesheet" media="all">
+        <link href="src/css/example.css" rel="stylesheet" media="all">
+
+        <script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="src/js/bootstrap.js"></script>
+
+        <script type="text/javascript" charset="utf-8" src="bin/module.JcarrouselCanvas.1.0.2.js"></script>
+
+    </head>
+    <body>
+
+
+        <header class="container-fluid">
+            <figure>
+                <img src="src/img/logo.png">
+            </figure>
+        </header>
+
+        <div class="container">
+            <!-- Set just a DIV element with WIDTH and HEIGHT style -->
+            <div id='carrousel' style="width:500px; height:250px;">
+            </div>
+
+            <!-- Or set just a CANVAS element with WIDTH and HEIGHT attribut -->
+            <canvas id='carrousel1' width="500" height="250">
+                Votre navigateur ne supporte pas l'utilisation des Canvas.
+            </canvas>
+            <canvas id='carrousel2' width="250" height="500">
+                Votre navigateur ne supporte pas l'utilisation des Canvas.
+            </canvas>
+            <canvas id='carrousel3' width="500" height="400">
+                Votre navigateur ne supporte pas l'utilisation des Canvas.
+            </canvas>
+
+        </div>
+
+        <script type="text/javascript" charset="utf-8" src="src/js/example.js"></script>
+    </body>
+</html>

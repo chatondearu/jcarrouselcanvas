@@ -1,0 +1,12 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #222222;
+}
+
+body > header {
+  padding: 100px 0;
+  background: #555555;
+  text-align: center;
+}
